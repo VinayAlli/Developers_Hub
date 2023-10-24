@@ -1,0 +1,25 @@
+{
+  "name": "developer-hub",
+  "version": "1.0.0",
+  "description": "mern application",
+  "main": "server",
+  "scripts": {
+    "server": "nodemon server --prefix server",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.1",
+    "react-hot-toast": "^2.4.1",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
+  }
+}

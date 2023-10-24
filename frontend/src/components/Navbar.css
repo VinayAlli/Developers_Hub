@@ -1,0 +1,29 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Averia Serif Libre', cursive;
+    font-family: 'Tilt Neon', cursive;
+    background-color: rgba(255, 235, 205, 0.579);
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 0.5rem;
+    width: 50%;
+
+}
+
+@media (max-width: 767px) {
+    .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 0.5rem;
+        width: 75%;
+    
+    }
+}
