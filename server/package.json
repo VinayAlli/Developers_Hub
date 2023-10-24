@@ -5,6 +5,7 @@
   "main": "server",
   "scripts": {
     "server": "node server",
+    "dev": "npm run server" 
   },
   "author": "",
   "license": "ISC",
