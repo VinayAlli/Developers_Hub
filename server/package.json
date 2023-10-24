@@ -4,7 +4,7 @@
   "description": "mern application",
   "main": "server",
   "scripts": {
-    "server": "npm run server",
+    "server": "node server",
   },
   "author": "",
   "license": "ISC",
