@@ -11,7 +11,7 @@ export const Myprofile = () => {
     
     
     useEffect(() => {
-        axios.get('http://localhost:8000/myprofile',
+        axios.get('https://developers-hub-api.vercel.app/myprofile',
         {headers:
           {'x-token':localStorage.getItem('token')}
         }).then(res=>setData(res.data))
@@ -19,7 +19,7 @@ export const Myprofile = () => {
       }, [])
 
       useEffect(() => {
-        axios.get('http://localhost:8000/myreviews',
+        axios.get('https://developers-hub-api.vercel.app/myreviews',
         {headers:
           {'x-token':localStorage.getItem('token')}
         }).then(res=>setRatings(res.data))
@@ -27,7 +27,7 @@ export const Myprofile = () => {
       }, [])
 
       useEffect(() => {
-        axios.get('http://localhost:8000/getalltasks',{headers:
+        axios.get('https://developers-hub-api.vercel.app/getalltasks',{headers:
         {'x-token':localStorage.getItem('token')}
       }).then(res => setTasks(res.data));
       }, []);
