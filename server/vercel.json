@@ -8,10 +8,7 @@
   "routes":[
     {
       "src": "/(.*)",
-      "dest":"/",
-      "headers":{
-        "Acess-Control-Allow-Origin":"*"
-      }
+      "dest":"/"
     }
   ]
 }
