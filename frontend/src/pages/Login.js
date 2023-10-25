@@ -15,12 +15,19 @@ export const Login = () => {
   const changeHandler=(e)=>{
     setData({...data,[e.target.name]:e.target.value})
   }
+  const { setHeader } = require('http');
+
+module.exports = async (req, res) => {
+  setHeader(res, 'Access-Control-Allow-Origin', 'https://developers-hub-one.vercel.app');
+
+  // Add your API logic here
   const submitHandler=(e)=>{
     e.preventDefault()
     axios.post('https://developers-hub-api.vercel.app/login',data).then(
         res=>{localStorage.setItem('token',res.data.token);setAuth(true);setIsAuthenticated(localStorage.getItem('token'))}
     ).catch((err)=>alert('error'))
   }
+}
   if (auth){
      navigate('/dashboard');
   }
