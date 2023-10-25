@@ -11,7 +11,8 @@ const app=express()
 app.use(express.json());
 app.use(cors(
     {origin:['https://developers-hub-one.vercel.app'],
-     methods:['POST','GET']
+     methods:['POST','GET'],
+     credentials:true 
     }
 ));
 mongoose.connect('mongodb+srv://alliviswanadh2001:sabhal963@cluster0.es2use3.mongodb.net/?retryWrites=true&w=majority').then(()=>console.log('db connected'))
