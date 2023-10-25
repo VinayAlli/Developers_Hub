@@ -2,9 +2,9 @@
   "name": "developer-hub",
   "version": "1.0.0",
   "description": "mern application",
-  "main": "server",
+  "main": "index",
   "scripts": {
-    "dev": "npm run server" 
+    "dev": "npm run index" 
   },
   "author": "",
   "license": "ISC",
