@@ -10,6 +10,19 @@ const cors = require('cors');
 const app=express()
 app.use(express.json());
 app.use(cors({origin:'* '}));
+app.all('*', (req, res, next) => {
+  // Set the Access-Control-Allow-Origin header.
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  // Set the Access-Control-Allow-Methods header.
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+
+  // Set the Access-Control-Allow-Headers header.
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+
+  // Next middleware.
+  next();
+});
 mongoose.connect('mongodb+srv://alliviswanadh2001:sabhal963@cluster0.es2use3.mongodb.net/?retryWrites=true&w=majority').then(()=>console.log('db connected'))
 
 
