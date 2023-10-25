@@ -10,9 +10,7 @@ const cors = require('cors');
 const app=express()
 app.use(express.json());
 app.use(cors(
-    {origin:'* ',
-     methods:{"POST","GET"},
-    credentials: true
+    {origin:'* '
     }
 ));
 mongoose.connect('mongodb+srv://alliviswanadh2001:sabhal963@cluster0.es2use3.mongodb.net/?retryWrites=true&w=majority').then(()=>console.log('db connected'))
