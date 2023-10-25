@@ -19,7 +19,7 @@ export const Register = () => {
       }
       const submitHandler=(e)=>{
         e.preventDefault()
-        axios.post("http://localhost:8000/register", data).then(()=>{
+        axios.post("https://developers-hub-api.vercel.app/register", data).then(()=>{
           alert('Registered Successfully')
           navigate('/login')
           }).catch((err)=>alert('error'))
