@@ -13,14 +13,14 @@ export const Dashboard = () => {
   const {details,setDetails }=useContext(UserdetailsContext)
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get('http://localhost:8000/myprofile',
+    axios.get('https://developers-hub-api.vercel.app/myprofile',
     {headers:
       {'x-token':localStorage.getItem('token')}
     }).then(res=>setUser(res.data))
     
   }, [])
   useEffect(() => {
-    axios.get('http://localhost:8000/allprofiles',
+    axios.get('https://developers-hub-api.vercel.app/allprofiles',
     {headers:
       {'x-token':localStorage.getItem('token')}
     }).then(res=>setData(res.data))
