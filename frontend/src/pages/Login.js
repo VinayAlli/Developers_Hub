@@ -15,7 +15,6 @@ export const Login = () => {
   const changeHandler=(e)=>{
     setData({...data,[e.target.name]:e.target.value})
   }
-  const { setHeader } = require('http');
 
   const submitHandler=(e)=>{
     e.preventDefault()
