@@ -14,7 +14,7 @@ export const Individualprofile = () => {
   const [taskinfo,setTaskinfo]=useState(null)
   const navigate=useNavigate()
   useEffect(() => {
-    axios.get('http://localhost:8000/myprofile',
+    axios.get('https://developers-hub-api.vercel.app/myprofile',
     {headers:
       {'x-token':localStorage.getItem('token')}
     }).then(res=>setTaskprovider(res.data.fullname))
@@ -22,7 +22,7 @@ export const Individualprofile = () => {
   }, [])
   localStorage.setItem('x-id',details.id)
   useEffect(() => {
-    axios.get('http://localhost:8000/userreviews', {
+    axios.get('https://developers-hub-api.vercel.app/userreviews', {
       headers: {
         'x-id': localStorage.getItem('x-id')
       }
@@ -51,7 +51,7 @@ export const Individualprofile = () => {
   const sendrating=(e)=>{
     e.preventDefault()
     if(taskprovider!==taskworkerName){
-    axios.post('http://localhost:8000/addreview',review,{headers:
+    axios.post('https://developers-hub-api.vercel.app/addreview',review,{headers:
     {'x-token':localStorage.getItem('token')}
     }).then(
         res=>alert(res.data),
@@ -70,7 +70,7 @@ export const Individualprofile = () => {
   const sendtask=(e)=>{
     e.preventDefault()
     if(taskprovider!==taskworkerName){
-    axios.post('http://localhost:8000/addtask',task,{headers:
+    axios.post('https://developers-hub-api.vercel.app/addtask',task,{headers:
     {'x-token':localStorage.getItem('token')}
     }).then(
         res=>alert(res.data),
