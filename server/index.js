@@ -18,7 +18,7 @@ app.all('*', (req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
 
   // Set the Access-Control-Allow-Headers header.
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization,token');
 
   // Next middleware.
   next();
