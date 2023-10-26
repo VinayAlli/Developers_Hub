@@ -18,7 +18,7 @@ export const Login = () => {
 
   const submitHandler=(e)=>{
     e.preventDefault()
-    axios.post('https://developers-hub-api.vercel.app/login',data).then(
+    axios.post('https://developers-hub-api.vercel.app//login',data).then(
         res=>{localStorage.setItem('token',res.data.token);setAuth(true);setIsAuthenticated(localStorage.getItem('token'))}
     ).catch((err)=>alert('error'))
   }
